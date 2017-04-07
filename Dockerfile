@@ -4,6 +4,6 @@ WORKDIR /gopath/app
 ENV GOPATH /gopath/app
 ADD . /gopath/app/
 RUN go get github.com/Shopify/sarama
-RUN go install kafkaproducer
+RUN go install kafkaconsumer
 ENV TZ Asia/Shanghai
-entrypoint ["/gopath/app/bin/kafkaproducer"]
+entrypoint ["/gopath/app/bin/kafkaconsumer"]
